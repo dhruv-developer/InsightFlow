@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groq API Extension</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Groq API Extension</h1>
+  
+  <div class="form-group">
+    <label for="api-type">Select API Type:</label>
+    <select id="api-type">
+      <option value="fact-check">Fact Check</option>
+      <option value="simplify">Simplify Text</option>
+      <option value="translate">Translate Text</option>
+      <option value="market-analysis">Market Analysis</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="input-text">Input Text:</label>
+    <textarea id="input-text" placeholder="Enter your input here..." rows="5"></textarea>
+  </div>
+
+  <div class="form-group" id="language-input" style="display: none;">
+    <label for="language">Target Language (e.g., es for Spanish, fr for French):</label>
+    <input type="text" id="language" placeholder="Enter target language code">
+  </div>
+
+  <button id="submit-btn">Submit</button>
+
+  <div id="result">
+    <h3>Result:</h3>
+    <pre id="result-text"></pre>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
